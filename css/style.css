@@ -19,6 +19,7 @@ div {
 .nav-bar{
     border-radius: 3px;
     background-color: #2a3644;
+    overflow: hidden;
 }
 .table-results{
     margin: 50px 0 50px;
@@ -26,7 +27,7 @@ div {
 .village{
     margin: 50px 0;
 }
-.products-menu, .technics-menu, .village-menu, .soc-menu{
+.products-menu, .village-menu, .soc-menu{
     display: flex;
     justify-content: space-between;
 }
@@ -34,7 +35,8 @@ ul {
     display: block;
     margin: 0;
     padding-left: 0;
-    list-style: none; 
+    /* padding-right: 0; */
+    list-style: none;       
 }
 .products-menu a, .technics-menu a, .village-menu a {
     display: block;
@@ -52,34 +54,45 @@ nav{
     border-left: none;
 }
 .nav-menu li {
-    position: relative;
+    position: relative;   
 }
 .nav-menu>li {
     display: inline-block;
     position: relative;
-    border-right: 1px solid #3f4852;
+    border: 1px solid #3f4852;
 }
 ul>li {
      font: bold 16px Arial;
 }
 ul>li>a {
-    text-align: left;
+    text-align: center;
     color: #fff;
     text-decoration: none;
 }
 ul>li>a:hover{
-    color: #fd8300;
+    color: #fd8300;  
+}
+li:hover{
+    background-color: #3f4852;
 }
 li:hover .sub{
     display: block;  
 }
 .sub{
-    padding-top: 10px;
+    margin-top: 3px;
     position: absolute;
     display: none;
     width: 210px;
     background-color: #d2d4d5; 
     z-index: 1;
+    border-radius: 3px;
+}
+.milk{
+    right: -2px;
+    margin-top: 3px;
+}
+.river{
+    margin-top: 5px;
 }
 .sub a{
     color: #2a3644;
@@ -118,9 +131,29 @@ li:hover .sub{
     width: 210px;
     z-index: 1;
 }
+.table-results ul{
+    font-size: 0;
+    border-left: none;
+}
 .sub li:first-child, .sub1 li:first-child, .sub2 li:first-child, .sub3 li:first-child {
     border-top: none;
+    border-bottom: 1px solid #b9bdc1;
     border-radius: 3px;
+}
+.sub li:last-child, .sub1 li:last-child, .sub2 li:first-child, .sub3 li:first-child {
+    border-bottom: none;
+    border-radius: 3px;
+}
+.sub-village1 li:first-child, .sub-village2 li:first-child, .sub2 li:first-child, .sub3 li:first-child {
+    border-top: none;
+    border-bottom: 1px solid #b9bdc1;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.sub-village1 li:last-child, .sub-village2 li:last-child, .sub2 li:first-child, .sub3 li:first-child {
+    border-bottom: none;
+    border-radius: 3px;
+    overflow: hidden;
 }
 .sub2 {
     position: absolute;
@@ -155,6 +188,8 @@ li:hover .sub{
     display: none;
     width: 210px;
     z-index: 1;
+    border-radius: 3px;
+    
 }
 .sub-vil3 {
     display: table;
@@ -171,7 +206,6 @@ li:hover .sub{
     color: #fd8300; 
     background-color: #3f4852;
 }
-
 .village {
     display: flex;
     justify-content: space-between;
@@ -208,13 +242,20 @@ li:hover .sub{
     display: table;
     padding-top: 5px;
 }
-.sub-vil1 > li:first-child:hover > a,
-.sub-vil2 > li:first-child:hover > a{
-    border-radius: 0;
+.sub-village1 li:first-child,
+.sub-village2 li:first-child{
+    border-radius: 3px;
+    border-bottom: none;
+}
+.sub-village1 li:last-child,
+.sub-village2 li:last-child{
+    border-radius: 3px;
+    border-top: none;
 }
 .sub_b .sub-village{
     display: table-row;
     background-color: #d2d4d5;
+    border-radius: 3px;
 }
 .sub-village{
     border-radius: 3px;
@@ -241,16 +282,23 @@ li:hover .sub{
     border-bottom: none;
     border-radius: 3px;
 }
+.sub-village1 li:first-child{
+    border-top: none;
+    border-bottom: none;
+    border-radius: 3px;
+}
+
 .sub-village1 li{
-    border-right: none;
+    border-right: 1px solid #b9bdc1;
+    border-left: none;
     background-color: #d2d4d5;
     z-index: 1; 
+    border-radius: 3px;
 }
 .sub-village2 li{
     border-right: none;
     left: 100%;
     background-color: #d2d4d5;
-    z-index: 1;
 }
 .village-menu .home{
     padding-left: 56px;
@@ -283,7 +331,7 @@ li:hover .sub{
 .fb{
     width: 10px;
     height: 19px;
-    background-position: -80px 0px;
+    background-position: -79px 1px;
 }
 .fb:hover{
     background-position: -80px -24px;
@@ -291,7 +339,7 @@ li:hover .sub{
 .tw{
     width: 18px;
     height: 15px;
-    background-position: -121px 0px;
+    background-position: -122px -1px;
 }
 .tw:hover{
     background-position: -121px -28px;
@@ -330,6 +378,7 @@ li:hover .sub{
     width: 100%;
     border-collapse: collapse;
     border-radius: 3px;
+    overflow: hidden;
 }
 .table-res thead,
 .style-table p:first-child{
